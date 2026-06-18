@@ -13,15 +13,17 @@ const Login = () => {
     const navigate=useNavigate()
 
 
+
+    const API_BASE_URL = import.meta.env.VITE_API_URL || "https://mockprepai-backend.onrender.com";
     const handleSubmit=async(e)=>{
         e.preventDefault()
         try{
-        
+       
 
-        const response=await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/login`,{
+        const response=await axios.post(`${API_BASE_URL}/api/auth/login`,{
             email,password
             })
-            console.log()
+           
 
             localStorage.setItem('token',response.data.token)
 
@@ -54,7 +56,7 @@ return (
     <div className="mt-2">
     <input
         id='email'
-        type='text'
+        type='email'
         value={email}
         placeholder='Enter your email'
         onChange={(e)=>setEmail(e.target.value)}

@@ -4,6 +4,10 @@ import axios from 'axios'
 import { useNavigate,Link } from 'react-router-dom'
 import { FaRobot } from 'react-icons/fa'
 
+
+
+  const API_BASE_URL = import.meta.env.VITE_API_URL || "https://mockprepai-backend.onrender.com";
+
 const Register = () => {
     const {login} =useContext(AuthContext)
     const navigate=useNavigate()
@@ -16,7 +20,7 @@ const Register = () => {
     e.preventDefault()
     try{
 
-    const response= await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/register`,{
+    const response= await axios.post(`${API_BASE_URL}/api/auth/register`,{
         name,email,password
     })
     localStorage.setItem('token',response.data.token)
@@ -59,12 +63,12 @@ return (
 
    <div>
         <div className="flex items-center justify-between">
-          <label for="password" className="block text-sm/6 font-medium text-black">Email</label>
+          <label for="email" className="block text-sm/6 font-medium text-black">Email</label>
         </div>
         <div className="mt-2">
     <input
         id='email'
-        type='text'
+        type='email'
         value={email}
         placeholder='Enter your email'
         onChange={(e)=>setEmail(e.target.value)}
