@@ -21,6 +21,7 @@ const Login = () => {
         const response=await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/login`,{
             email,password
             })
+            console.log()
 
             localStorage.setItem('token',response.data.token)
 
@@ -58,7 +59,7 @@ return (
         placeholder='Enter your email'
         onChange={(e)=>setEmail(e.target.value)}
         autoComplete="email"
-        className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-indigo-300/70 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
+        className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-black outline-1 -outline-offset-1 outline-indigo-300/70 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
 
         required/>
         </div>
@@ -81,7 +82,7 @@ return (
         placeholder='Enter your password'
         onChange={(e)=>setPassword(e.target.value)}
          autoComplete="email"
-        className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-indigo-300/70 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
+        className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-black outline-1 -outline-offset-1 outline-indigo-300/70 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
         required/>
          </div>
          <a href="#" className="font-semibold text-indigo-400 hover:text-indigo-300">

@@ -49,7 +49,7 @@ return (
         value={name}
         placeholder='Enter your name'
         onChange={(e)=>setName(e.target.value)}
-        className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-indigo-300/70 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"     
+        className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-black outline-1 -outline-offset-1 outline-indigo-300/70 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"     
         required/>
         </div>
             </div>
@@ -68,7 +68,7 @@ return (
         value={email}
         placeholder='Enter your email'
         onChange={(e)=>setEmail(e.target.value)}
-        className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-indigo-300/70 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" 
+        className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-black outline-1 -outline-offset-1 outline-indigo-300/70 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" 
         required
         autocomplete="email"/>
         </div>
@@ -88,7 +88,7 @@ return (
         placeholder='Enter your password'
         onChange={(e)=>setPassword(e.target.value)}
         autocomplete="current-password" 
-        className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-indigo-300/70 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
+        className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-black outline-1 -outline-offset-1 outline-indigo-300/70 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
         required/>
         </div>
         <div className=" text-sm " >
