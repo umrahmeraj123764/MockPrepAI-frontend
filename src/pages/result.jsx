@@ -24,7 +24,7 @@ return (
     </p>
     <div className="inline-flex items-center justify-center bg-blue-50 text-blue-700 rounded-full px-6 py-3 border border-blue-100">
         <span className="text-3xl sm:text-4xl font-black">
-        {averageScore.toFixed(1)}/10
+        {averageScore.toFixed(1)}
     </span>
         <span className="text-xl font-semibold text-blue-500 ml-1">/ 10</span>
       </div>
