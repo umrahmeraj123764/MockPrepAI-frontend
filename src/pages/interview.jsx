@@ -17,11 +17,13 @@ const Interview = () => {
         const [allfeedback,setAllfeedback]=useState([])
         const [loading, setLoading] = useState(false);
 
+
+         const API_BASE_URL = import.meta.env.VITE_API_URL || "https://mockprepai-backend.onrender.com";
     const handleSubmit=async (e) => {
         e.preventDefault()
         setLoading(true)
         try{
-        const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/interview/response`,{
+        const response = await axios.post(`${API_BASE_URL}/api/interview/response`,{
             sessionId:session._id,
             question:Currentquestion,answer
     },{headers:{Authorization:`Bearer ${localStorage.getItem('token')}`}

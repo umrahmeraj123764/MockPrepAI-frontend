@@ -19,13 +19,14 @@ const Setup = () => {
           {value:"behavioral",label:"Behavioral/HR"},
     ]
 
+     const API_BASE_URL = import.meta.env.VITE_API_URL || "https://mockprepai-backend.onrender.com";
     const handleSubmit=async(e)=>{
     e.preventDefault()
     try{
          const token=localStorage.getItem('token')
         console.clear()
             console.log('sending token',token)
-    const response=await axios.post(`${import.meta.env.VITE_API_URL}/api/interview/start`,{
+    const response=await axios.post(`${API_BASE_URL}/api/interview/start`,{
         role,type
     },
     {headers:{
