@@ -18,12 +18,12 @@ const Login = () => {
     const handleSubmit=async(e)=>{
         e.preventDefault()
         try{
-       
+       console.log(email,password)
 
         const response=await axios.post(`${API_BASE_URL}/api/auth/login`,{
             email,password
             })
-
+console.log(response.data)   
             login(response.data.token,response.data)
             navigate('/setup')
         }
