@@ -23,7 +23,7 @@ const Register = () => {
     const response= await axios.post(`${API_BASE_URL}/api/auth/register`,{
         name,email,password
     })
-    
+
     login(response.data.token, response.data)
      navigate('/setup')
     }
@@ -95,9 +95,7 @@ return (
         className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-black outline-1 -outline-offset-1 outline-indigo-300/70 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
         required/>
         </div>
-        <div className=" text-sm " >
-            <a href="#" className="font-semibold text-indigo-400 hover:text-indigo-300 " >Forgot password?</a>
-        </div>
+    
         </div>
     <div className='m-5'>
     <button type='submit' className="flex w-full justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Register</button>
