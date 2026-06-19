@@ -23,7 +23,7 @@ const Register = () => {
     const response= await axios.post(`${API_BASE_URL}/api/auth/register`,{
         name,email,password
     })
-    localStorage.setItem('token',response.data.token)
+    
     login(response.data.token, response.data)
      navigate('/setup')
     }
