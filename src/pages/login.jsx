@@ -34,7 +34,6 @@ const Login = () => {
     console.log("STATUS:", error.response?.status)
 }
     }
-}
 
 
 return (
