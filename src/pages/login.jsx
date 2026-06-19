@@ -23,13 +23,16 @@ const Login = () => {
         const response=await axios.post(`${API_BASE_URL}/api/auth/login`,{
             email,password
             })
-console.log(response.data)   
+
+            console.log("LOGIN RESPONSE:", response.data) 
             login(response.data.token,response.data)
             navigate('/setup')
         }
 
     catch(error){
-        console.log(error)
+       console.log("ERROR RESPONSE:", error.response?.data)
+    console.log("STATUS:", error.response?.status)
+}
     }
 }
 
